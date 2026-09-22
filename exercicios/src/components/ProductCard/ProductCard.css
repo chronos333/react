@@ -1,0 +1,176 @@
+.product-card {
+position: relative;
+overflow: hidden;
+background-color: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 12px;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card.featured {
+border: 2px solid #2563eb;
+}
+
+.product-card.sale {
+background-color: #fffbeb;
+}
+
+.product-card.out-of-stock {
+opacity: 0.65;
+filter: grayscale(30%);
+}
+
+.product-image-container {
+position: relative;
+}
+
+.product-image {
+display: block;
+width: 100%;
+height: 220px;
+object-fit: cover;
+}
+
+.product-badge {
+position: absolute;
+top: 12px;
+padding: 6px 10px;
+border-radius: 6px;
+font-size: 12px;
+font-weight: bold;
+}
+
+.featured-badge {
+left: 12px;
+background-color: #2563eb;
+color: white;
+}
+
+.sale-badge {
+right: 12px;
+background-color: #f59e0b;
+color: white;
+}
+
+.stock-badge {
+left: 12px;
+bottom: 12px;
+background-color: #374151;
+color: white;
+}
+
+.product-info {
+padding: 20px;
+}
+
+.product-category {
+font-size: 13px;
+font-weight: bold;
+color: #2563eb;
+}
+
+.product-info h2 {
+margin: 8px 0;
+font-size: 20px;
+}
+
+.product-description {
+min-height: 45px;
+color: #6b7280;
+font-size: 14px;
+line-height: 1.5;
+}
+
+.product-price {
+margin: 16px 0;
+font-size: 22px;
+font-weight: bold;
+}
+
+.product-actions {
+display: flex;
+gap: 8px;
+}
+
+.cart-button {
+flex: 1;
+padding: 11px;
+border: none;
+border-radius: 8px;
+background-color: #111827;
+color: white;
+cursor: pointer;
+}
+
+.cart-button:hover:not(:disabled) {
+background-color: #374151;
+}
+
+.cart-button:disabled {
+background-color: #9ca3af;
+cursor: not-allowed;
+}
+
+.favorite-button {
+width: 45px;
+border: 1px solid #d1d5db;
+border-radius: 8px;
+background-color: white;
+font-size: 22px;
+cursor: pointer;
+}
+
+.favorite-button.is-favorite {
+border-color: #ef4444;
+}
+
+.admin-actions {
+display: flex;
+gap: 8px;
+margin-top: 10px;
+}
+
+.featured-button,
+.edit-button,
+.remove-button {
+flex: 1;
+padding: 9px;
+border-radius: 7px;
+cursor: pointer;
+font-size: 12px;
+}
+
+.featured-button {
+border: 1px solid #2563eb;
+background-color: white;
+color: #2563eb;
+}
+
+.featured-button:hover {
+background-color: #eff6ff;
+}
+
+.edit-button {
+border: 1px solid #d97706;
+background-color: white;
+color: #d97706;
+}
+
+.edit-button:hover {
+background-color: #fffbeb;
+}
+
+.remove-button {
+border: 1px solid #dc2626;
+background-color: white;
+color: #dc2626;
+}
+
+.remove-button:hover {
+background-color: #fef2f2;
+}
