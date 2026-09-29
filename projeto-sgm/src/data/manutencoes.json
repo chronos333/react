@@ -1,0 +1,34 @@
+{
+  "ordensIniciais": [
+    {
+      "id": "os-101",
+      "equipment": "Bomba Hidráulica EQ-014",
+      "service": "Troca de vedação e teste de pressão",
+      "technician": "Carlos Eduardo",
+      "durationSeconds": 1080,
+      "completedAt": "28/09/2026, 14:30"
+    },
+    {
+      "id": "os-102",
+      "equipment": "Painel Elétrico PE-008",
+      "service": "Inspeção termográfica e reaperto",
+      "technician": "Mariana Silva",
+      "durationSeconds": 1920,
+      "completedAt": "29/09/2026, 09:15"
+    }
+  ],
+  "equipamentosSugestão": [
+    "Bomba Hidráulica EQ-014",
+    "Painel Elétrico PE-008",
+    "Compressor de Ar CP-002",
+    "Prensa Pneumática PR-005",
+    "Exaustor Industrial EX-011"
+  ],
+  "servicosSugestao": [
+    "Troca de vedação e teste de pressão",
+    "Inspeção termográfica e reaperto",
+    "Lubrificação preventiva e limpeza",
+    "Troca de rolamentos e alinhamento",
+    "Calibração de sensores de fluxo"
+  ]
+}

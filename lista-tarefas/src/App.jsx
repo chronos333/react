@@ -1,21 +1,57 @@
+import { useState } from "react";
+
 import Header from "./components/Header";
+import TarefaForm from "./components/TarefaForm";
+import TarefaItem from "./components/TarefaItem";
+import TarefaList from "./components/TarefaList";
+import { tarefaInicial } from "./data/tarefaMock";
 
 function App(){
+
+  const [tarefas, setTarefas] = useState(tarefaInicial);
+
+  //estado para os botões
+  const [filter, setFilter] = useState("todas");
+  const [termoBusca, setTermoBusca] = useState("");
+
+
+  //Criando o Cálculo/lógica de Filtragem
+
+  const visibilidadeTarefa = tarefa.filter((tarefa)=>{
+    const filtragem = filter === "todas" ? true :
+    
+  });
+
+  function handleMudar(id){
+    setTarefas((prevTarefas)=> prevTarefas.map((tarefa)=> tarefa.id === id ? {...tarefa, completa: !tarefa.completa }: tarefa));
+
+  }
+
+  function handleRemover(id){
+    setTarefas((prevTarefas)=> prevTarefas.filter((tarefa) => tarefa.id !== id));
+  }
+
+  //adicionar uma nova tarefa com 
+  function handleAdicionar(titulo)  {
+    const novaTarefa = {
+      id: Date.now().toString(),
+      titulo,
+      descricao: "Nova Tarefa do Usuário",
+      prioridade: "Normal",
+      completa: false
+    };
+
+    // usando o método adicionar do react(imutabilidade)
+    setTarefas((prevTarefas)=> [novaTarefa, ...prevTarefas]);
+  }
+
+
   return(
     <main className="app-container">
       <Header/>
-      <section className="app-content">
-        <p>Conteúdo principal em desenvolvimento</p>
-        <TarefaItem
-          titulo="configurar ambiente"
-          descricao="Instalar node.js e vs code"/>
-        
-        <TarefaItem
-          titulo="criar aplicaçao vite"
-          descricao="Usar o comando npm create"/>
-
-
-      </section>
+      <TarefaForm/>
+      <p className="tarefa-contador">Tarefas Cadastradas: {tarefas.length}</p>
+      <TarefaList tarefas={tarefas} />
     </main>
   );
 }
