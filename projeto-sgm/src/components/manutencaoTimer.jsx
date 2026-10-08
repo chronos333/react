@@ -27,5 +27,5 @@ function ManutencaoTimer({intervaloSegundo, setIntervaloSegundo, isActive}){
         </div>
     );
 }
-c
-export default ManutencaoTimer
+
+export default ManutencaoTimer;

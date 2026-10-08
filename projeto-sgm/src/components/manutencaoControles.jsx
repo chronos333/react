@@ -1,14 +1,25 @@
 // componente para controlar o timer da manutenção  ( permitir pausar, zerar e concluir a manutenção)
 
-function ManutencaoControles(){
-    return (
+function ManutencaoControles({
+  isActive,
+  onToggleActive,
+  onReset,
+  onComplete,
+  canStart,
+  canComplete,
+}) {
+  return (
     <div className="controls-group">
       <button
         type="button"
         className={`btn-primary ${isActive ? "btn-pause" : "btn-start"}`}
         onClick={onToggleActive}
         disabled={!isActive && !canStart}
-        aria-label={isActive ? "Pausar ordem de manutenção" : "Iniciar ordem de manutenção"}
+        aria-label={
+          isActive
+            ? "Pausar ordem de manutenção"
+            : "Iniciar ordem de manutenção"
+        }
       >
         {isActive ? "Pausar" : "Iniciar"}
       </button>
@@ -22,7 +33,12 @@ function ManutencaoControles(){
         Zerar
       </button>
 
-      <button type="button" className="btn-secondary" onClick={onComplete} disabled={!canComplete}>
+      <button
+        type="button"
+        className="btn-secondary"
+        onClick={onComplete}
+        disabled={!canComplete}
+      >
         Concluir ordem
       </button>
     </div>

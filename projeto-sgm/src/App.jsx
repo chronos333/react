@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import ManutencaoTimer from "./components/manutencaoTimer";
+import ManutencaoTimer from "./components/ManutencaoTimer";
 import MonitorSeguro from "./components/MonitorSeguro";
 
 function App(){
